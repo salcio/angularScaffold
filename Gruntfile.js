@@ -71,6 +71,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-usemin');	
 	
 	// Tell Grunt what to do when we type "grunt" into the terminal
-    grunt.registerTask('deployDev', ['ngconstant:dev', 'copy', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'rev', 'usemin']);
-	grunt.registerTask('deployProd', ['ngconstant:prod', 'copy', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'rev', 'usemin']);
+    grunt.registerTask('deployDev', ['clean', 'ngconstant:dev', 'copy', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'rev', 'usemin']);
+	grunt.registerTask('deployProd', ['clean', 'ngconstant:prod', 'copy', 'useminPrepare', 'concat', 'uglify', 'cssmin', 'rev', 'usemin']);
 };

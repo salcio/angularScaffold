@@ -8,3 +8,4 @@ tmp
 npm-debug.log
 dist/
 .tmp/
+app/config.js
