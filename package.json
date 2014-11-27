@@ -25,6 +25,7 @@
 	"grunt-ng-constant": "~1.0.0"
   },
   "scripts": {
+	"preinstall": "npm install -g grunt-cli",
     "postinstall": "bower install && grunt ngconstant:local",
 
     "prestart": "npm install",
