@@ -17,18 +17,27 @@ module.exports = function(config){
 
     browsers : ['PhantomJS'],
 
-    plugins : [
-            'karma-chrome-launcher',
-            'karma-firefox-launcher',
-            'karma-jasmine',
-            'karma-junit-reporter',
-            'karma-phantomjs-launcher'
-            ],
+    preprocessors: {
+      'app/scripts/**/*.js': 'coverage'
+    },
+
+    coverageReporter: {
+      type: 'html',
+      dir: 'karma/coverage'
+    },
 
     junitReporter : {
-      outputFile: 'test_out/unit.xml',
+      outputFile: 'karma/xml/unit.xml',
       suite: 'unit'
-    }
+    },
 
+    htmlReporter: {
+      outputDir: 'karma/html',
+      templatePath: 'jasmine_template.html'
+    },
+
+    colors: true,
+
+    reporters: ['story', 'junit', 'coverage', 'html']
   });
 };
