@@ -43,17 +43,17 @@ module.exports = function(grunt) {
 		},
 		local:{
 		  constants: {
-			constants: grunt.file.readJSON('./app/configuration.local.json')
+			constants: grunt.file.readJSON('./configuration.local.json')
 		  }
 		},
 		dev: {
 		  constants: {
-			constants: grunt.file.readJSON('./app/configuration.dev.json')
+			constants: grunt.file.readJSON('./configuration.dev.json')
 		  }
 		},
 		prod: {
 		  constants: {
-			constants: grunt.file.readJSON('./app/configuration.production.json')
+			constants: grunt.file.readJSON('./configuration.production.json')
 		  }
 		},	
 		build: {
